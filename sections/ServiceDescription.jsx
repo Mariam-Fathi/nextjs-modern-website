@@ -20,7 +20,7 @@ const ServiceDescription = () => (
       <br/>
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="font-normal flex lg:text-[30px] text-[15px] text-justify text-left text-secondary-white"
+        className="font-normal flex lg:text-[30px] text-[15px] md:text-justify whitespace-normaltespace-normal text-left text-secondary-white"
       >
           In our digital marketing agency, we thrive in generating creative ideas and providing a wide array 
           of content solutions. From live videos, video productions, storyboards, infographics, motion graphics, 
@@ -69,7 +69,7 @@ const ServiceDescription = () => (
       <br/>
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="font-normal flex lg:text-[30px] text-[15px] text-justify text-left text-secondary-white"
+        className="font-normal flex lg:text-[30px] text-[15px] md:text-justify whitespace-normal text-left text-secondary-white"
       >
         In our digital marketing agency, we excel in SEM and SEO strategies that drive tangible results, uniquely 
         tailored to propel your business growth. Through our meticulous approach, we elevate your online presence, 
@@ -114,7 +114,7 @@ const ServiceDescription = () => (
       <br/>
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="font-normal flex lg:text-[30px] text-[15px] text-justify text-left text-secondary-white"
+        className="font-normal flex lg:text-[30px] text-[15px] md:text-justify whitespace-normal text-left text-secondary-white"
       >
       With website and mobile applications, communicate new products, differentiate, target younger demographics, 
       and stay connected on the go. Our agency offers top-notch solutions, creating captivating digital experiences 
@@ -163,7 +163,7 @@ const ServiceDescription = () => (
       <br/>
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="font-normal flex lg:text-[30px] text-[15px] text-justify text-left text-secondary-white"
+        className="font-normal flex lg:text-[30px] text-[15px] md:text-justify whitespace-normal text-left text-secondary-white"
       >
       Experience professional-grade broadcasting with Digitology! Stream live to social media or your website 
       and make your message shine in high definition. Engage your customers and create impactful live moments 
@@ -212,7 +212,7 @@ const ServiceDescription = () => (
       <br/>
       <motion.p
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        className="font-normal flex lg:text-[30px] text-[15px] text-justify text-left text-secondary-white"
+        className="font-normal flex lg:text-[30px] text-[15px] md:text-justify whitespace-normal text-left text-secondary-white"
       >
         We handle logistics, plan meticulously, and ensure seamless event execution. Our responsive team expertly
         tackles unexpected issues, ensuring optimal event coverage. Let's create a booming success together!

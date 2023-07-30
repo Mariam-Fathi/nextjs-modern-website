@@ -19,7 +19,7 @@ const Footer = () => (
     <div className="footer-gradient" />
     <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
       <div className="flex items-center justify-between flex-wrap gap-5">
-        <h4 className="font-normal md:text-[64px] text-[44px] text-white">
+        <h4 className="font-normal md:text-[55px] text-[30px] text-white">
           TRUST US FOR YOUR BUSINESS
         </h4>
       </div>

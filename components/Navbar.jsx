@@ -1,9 +1,10 @@
 'use client';
 
 import React from "react";
-import { HiMenuAlt4 } from "react-icons/hi";
-import { AiOutlineClose } from "react-icons/ai";
-import styles from '../styles';
+import { navVariants } from '../utils/motion';
+import { motion } from 'framer-motion';
+import { textVariant } from '../utils/motion';
+
 
 
 const NavBarItem = ({ title, classprops }) => (
@@ -11,10 +12,14 @@ const NavBarItem = ({ title, classprops }) => (
 );
 
 const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
-    <nav className="w-full flex md:justify-center justify-between items-center p-4">
+    <motion.nav     
+    variants={navVariants}
+    initial="hidden"
+    whileInView="show"
+    className="w-full flex md:justify-center justify-between items-center p-4"
+    >
       <div className="container mx-auto px-10 mb-8">
         <div className="border-b w-full inline-block border-blue-400 py-8">
           <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial ">
@@ -25,43 +30,20 @@ const Navbar = () => {
               Login
             </li>
           </ul>
-        <div className="md:hidden flex justify-center items-center flex-col relative z-10">
-          <h1 className={styles.heroHeading} >
-            Impressive
-          </h1>
-          <div
-            className="flex flex-row justify-center items-center"
-          >
-            <h1 className={styles.heroHeading} >Ma</h1>
-            <div className={styles.heroDText} />
-            <h1 className={styles.heroHeading}>Ness</h1>
+          <div className="md:hidden flex justify-center items-center flex-col relative z-10">
+            <motion.h1 variants={textVariant(1.1)} className='md:hidden flex text-lg text-white font-semibold' >
+              IMPRESSIVE
+            </motion.h1>
+            <motion.h1
+              variants={textVariant(1.2)}
+              className="md:hidden flex text-lg text-white font-semibold"
+            >
+              MADNESS
+            </motion.h1>
           </div>
-      </div>
-
-
-
         </div>
       </div>
-      <div className="flex relative">
-        {!toggleMenu && (
-          <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />
-        )}
-        {toggleMenu && (
-          <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
-        )}
-        {toggleMenu && (
-          <ul
-            className="z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
-            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
-          >
-            <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Market", "Exchange", "Tutorials", "Wallets"].map(
-              (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
-            )}
-          </ul>
-        )}
-      </div>
-    </nav>
+    </motion.nav>
   );
 };
 
